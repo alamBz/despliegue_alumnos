@@ -10,8 +10,14 @@ import java.util.List;
 
 @RestController
 public class Controlador {
+
     @Autowired
     private IServicio personaservi;
+
+    @GetMapping("/")
+    public String home() {
+        return "API funcionando";
+    }
 
     @PostMapping("/añadir")
     public String añadirPersona(@RequestBody Modelo per){
